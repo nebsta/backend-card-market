@@ -6,11 +6,20 @@ module.exports = function(grunt) {
         tsconfig: "tsconfig.json"
       }
     },
-    clean: [ ".tscache/", "dist" ]
+    clean: [ ".tscache/", "dist" ],
+    lint: {
+      default : {
+        tsconfig: './tsconfig.json',
+      },
+      options: {
+        src: [ "src/**/*.ts" ]
+      }
+    }
   });
 
   grunt.loadNpmTasks("grunt-ts");
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks("@nevware21/grunt-eslint-ts");
 
-  grunt.registerTask("default", ["ts"]);
+  grunt.registerTask("default", ["lint", "ts"]);
 };
