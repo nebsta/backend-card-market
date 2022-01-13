@@ -1,10 +1,11 @@
 
 import { IDatabase } from "./idatabase"
-import mongoose = require('mongoose');
+import { Document } from 'mongoose';
 
-class MongoDatabase implements IDatabase {
-    public async connect(): Promise<void> {
-        await mongoose.connect(process.env.MONGODB_CONN);
-    }
+// class MongoDatabase implements IDatabase {
+//     public async connect(): Promise<void> {
 
-}
+//         // await mongoose.connect(process.env.MONGODB_CONN);
+//     }
+
+// }

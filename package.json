@@ -19,7 +19,7 @@
   "dependencies": {
     "dotenv": "^11.0.0",
     "express": "^4.17.2",
-    "mongoose": "^6.1.6"
+    "mongoose": "^5.13.10"
   },
   "devDependencies": {
     "@nevware21/grunt-eslint-ts": "^0.2.2",
